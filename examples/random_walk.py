@@ -4,6 +4,7 @@ random actions.
 """
 import time
 
+import gym
 from gym_ai2thor.envs.ai2thor_env import AI2ThorEnv
 
 N_EPISODES = 3

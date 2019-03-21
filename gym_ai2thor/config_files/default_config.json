@@ -1,7 +1,7 @@
 {
-
     "open_close_interaction": true,
     "pickup_put_interaction": true,
+    "lookupdown_actions": true,
     "pickup_objects": [
         "Mug"
     ],
@@ -13,11 +13,16 @@
     "openable_objects": [
         "Microwave"
     ],
+    "max_episode_length": 1000,
     "scene_id": "FloorPlan28",
     "grayscale": true,
     "resolution": [128, 128],
+    "cameraY": 0.0,
+    "gridSize": 0.1,
+    "continuous_movement": false,
+    "build_file_name": false,
     "task": {
-        "task_name": "PickUp",
+        "task_name": "PickUpTask",
         "target_object": "Mug"
     }
 }

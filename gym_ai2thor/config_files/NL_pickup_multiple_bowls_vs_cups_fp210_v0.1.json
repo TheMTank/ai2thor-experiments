@@ -1,0 +1,25 @@
+{
+    "open_close_interaction": false,
+    "pickup_put_interaction": true,
+    "put_interaction": false,
+    "lookupdown_actions": false,
+    "continuous_movement": true,
+    "pickup_objects": [
+        "Mug",
+        "Bowl"
+    ],
+    "max_episode_length": 2000,
+    "movement_reward": -0.001,
+    "scene_id": "FloorPlan210",
+    "grayscale": false,
+    "resolution": [128, 128],
+    "cameraY": -0.8,
+    "gridSize": 0.05,
+    "build_file_name": "NL_pickup_multiple_bowls_vs_cups_fp210_v0.1.x86_64",
+    "task": {
+        "task_name": "NaturalLanguagePickUpMultipleObjectTask",
+        "list_of_instructions": ["Mug", "Bowl"],
+        "max_object_pickup_crosshair_dist": 1.1,
+        "max_object_pickup_euclidean_dist": 0.5
+    }
+}

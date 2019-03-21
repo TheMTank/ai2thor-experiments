@@ -2,10 +2,12 @@
 Adapted from: https://github.com/ikostrikov/pytorch-a3c/blob/master/my_optim.py
 
 In the original A3C paper (https://arxiv.org/abs/1602.01783), the authors compared 3 different
-optimizers i.e. Momentum SGD, RMSProp and Shared RMSProp (check final part of section 4). The
-difference between the 3rd compared to the 2nd is whether to compute shared statistics across all
-threads, which was found to be more robust. It seems the equivalent was implemented for Adam
-below.
+optimizers i.e. Momentum SGD, RMSProp and Shared RMSProp (check final part of section 4 and
+appendix). The difference between Shared RMSProp compared to an approach that uses a separate
+RMSProp on each thread, is whether to compute shared statistics g across all threads/processes and
+update them asynchronously. This was found to be more robust. It seems the equivalent was
+implemented for Adam below.
+# todo add formulat
 """
 
 import math
@@ -74,8 +76,7 @@ class SharedAdam(optim.Adam):
 
                 bias_correction1 = 1 - beta1 ** state['step'].item()
                 bias_correction2 = 1 - beta2 ** state['step'].item()
-                step_size = group['lr'] * math.sqrt(
-                    bias_correction2) / bias_correction1
+                step_size = group['lr'] * math.sqrt(bias_correction2) / bias_correction1
 
                 p.data.addcdiv_(-step_size, exp_avg, denom)
 

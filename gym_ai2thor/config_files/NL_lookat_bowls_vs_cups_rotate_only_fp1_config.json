@@ -1,0 +1,20 @@
+{
+    "open_close_interaction": false,
+    "pickup_put_interaction": false,
+    "lookupdown_actions": false,
+    "moveupdown_actions": false,
+    "max_episode_length": 1000,
+    "movement_reward": -0.001,
+    "scene_id": "FloorPlan2",
+    "grayscale": true,
+    "resolution": [128, 128],
+    "cameraY": -0.8,
+    "gridSize": 0.05,
+    "incremental_rotation": true,
+    "build_file_name": "bowls_vs_cups_rotate_only.x86_64",
+    "task": {
+        "task_name": "NaturalLanguageLookAtObjectTask",
+        "list_of_instructions": ["go to the Bowl", "please navigate to my Mug"],
+        "distance_threshold_3d": 3.0
+    }
+}

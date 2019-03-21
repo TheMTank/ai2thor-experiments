@@ -1,4 +1,4 @@
 from gym.envs.registration import register
 
-register(id='ai2thor_env-v0',
-         entry_point='gym_foo.envs:AI2ThorEnv')
+register(id='ai2thor-v0',
+         entry_point='gym_ai2thor.envs:AI2ThorEnv')

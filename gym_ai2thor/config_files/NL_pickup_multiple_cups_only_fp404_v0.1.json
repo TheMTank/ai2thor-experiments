@@ -1,0 +1,24 @@
+{
+    "open_close_interaction": false,
+    "pickup_put_interaction": true,
+    "put_interaction": false,
+    "lookupdown_actions": false,
+    "continuous_movement": true,
+    "pickup_objects": [
+        "Mug"
+    ],
+    "max_episode_length": 1000,
+    "movement_reward": -0.001,
+    "scene_id": "FloorPlan404",
+    "grayscale": false,
+    "resolution": [128, 128],
+    "cameraY": -0.8,
+    "gridSize": 0.05,
+    "build_file_name": "build_cups_only_pickup_multiple_fp404_v0.1.x86_64",
+    "task": {
+        "task_name": "NaturalLanguagePickUpMultipleObjectTask",
+        "list_of_instructions": ["Mug"],
+        "max_object_pickup_crosshair_dist": 1.2,
+        "max_object_pickup_euclidean_dist": 0.55
+    }
+}

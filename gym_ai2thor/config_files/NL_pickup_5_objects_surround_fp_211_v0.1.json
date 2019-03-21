@@ -1,0 +1,23 @@
+{
+    "open_close_interaction": false,
+    "pickup_put_interaction": true,
+    "put_interaction": false,
+    "lookupdown_actions": false,
+    "continuous_movement": true,
+    "pickup_objects": ["Newspaper", "RemoteControl", "CellPhone", "TissueBoxEmpty", "Book"],
+    "max_episode_length": 2000,
+    "movement_reward": -0.001,
+    "scene_id": "FloorPlan211",
+    "grayscale": false,
+    "resolution": [128, 128],
+    "cameraY": -0.8,
+    "gridSize": 0.05,
+    "build_file_name": "NL_pickup_5_objects_surround_fp_211_v0.1.x86_64",
+    "task": {
+        "task_name": "NaturalLanguagePickUpObjectTask",
+        "list_of_instructions": ["Newspaper", "RemoteControl", "CellPhone", "TissueBoxEmpty", "Book"],
+        "max_object_pickup_crosshair_dist": 1.2,
+        "max_object_pickup_euclidean_dist": 0.55,
+        "default_reward": 1
+    }
+}

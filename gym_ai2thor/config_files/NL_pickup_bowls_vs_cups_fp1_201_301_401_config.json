@@ -1,0 +1,30 @@
+{
+    "open_close_interaction": false,
+    "pickup_put_interaction": true,
+    "put_interaction": false,
+    "lookupdown_actions": false,
+    "continuous_movement": true,
+    "pickup_objects": [
+        "Bowl",
+        "Mug"
+    ],
+    "acceptable_receptacles": [
+        "CounterTop",
+        "TableTop",
+        "Sink"
+    ],
+    "max_episode_length": 1000,
+    "movement_reward": -0.001,
+    "grayscale": false,
+    "resolution": [128, 128],
+    "cameraY": -0.8,
+    "gridSize": 0.05,
+    "build_file_name": "build_bowls_vs_cups_fp1_201_301_401_v_0.1.x86_64",
+    "task": {
+        "task_name": "NaturalLanguagePickUpObjectTask",
+        "list_of_instructions": ["Bowl", "Mug"],
+        "max_object_pickup_crosshair_dist": 1.2,
+        "max_object_pickup_euclidean_dist": 0.6,
+        "random_scene_ids_on_reset": ["FloorPlan1", "FloorPlan201", "FloorPlan301", "FloorPlan401"]
+    }
+}
